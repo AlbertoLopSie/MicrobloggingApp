@@ -10,6 +10,7 @@ import Login from "./src/screens/Login";
 import Profile from "./src/screens/Profile";
 import Signup from "./src/screens/Signup";
 import Splash from "./src/screens/Splash";
+// import UserProfile from "./src/screens/UserProfile";
 
 const DrawerNavigation = createDrawerNavigator({
   DrawerPanel: DrawerPanel,
@@ -22,15 +23,16 @@ const DrawerNavigation = createDrawerNavigator({
 
 const StackNavigation = createStackNavigator(
   {
+    // UserProfile: UserProfile,
+    Signup: Signup,
+    Login: Login,
+    Home: Home,
+    DrawerPanel: DrawerPanel,
+    Profile: Profile,
+    Splash: Splash,
     DrawerNavigation: {
       screen: DrawerNavigation
     },
-    DrawerPanel: DrawerPanel,
-    Home: Home,
-    Login: Login,
-    Profile: Profile,
-    Signup: Signup,
-    Splash: Splash
   },
   {
     headerMode: "none"
